@@ -1,0 +1,11 @@
+<html>
+  <p id="pessoas"></> 
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script>
+    var socket = io('http://10.8.20.198:2000');
+    socket.on('online', function(data) {
+        $('#pessoas').html('Pessoas Online: ' + data);
+    });
+  </script>
+</html>
